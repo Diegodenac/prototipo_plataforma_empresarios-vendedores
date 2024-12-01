@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Vendedores</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario para Vendedores</h1>
+        <form action="#" method="post">
+            <label for="productos">¿Cuál es su especialidad en ventas?</label>
+            <select id="productos" name="productos" multiple>
+                <option value="bienes_raices">Bienes Raíces</option>
+                <option value="telefonia">Servicio de Telefonía</option>
+                <option value="alimentos">Alimentos</option>
+                <option value="hogar">Productos para el Hogar</option>
+                <option value="hogar">Cosméticos</option>
+                <option value="ferreteria">Ferretería</option>
+                <option value="herramientas">Herramientas</option>
+            </select>
+
+            <label for="comisiones">¿Ha trabajado en ventas por comisión antes?</label>
+            <div>
+                <input type="radio" id="si" name="comisiones" value="si">
+                <label for="si">Sí</label><br>
+                <input type="radio" id="no" name="comisiones" value="no">
+                <label for="no">No</label>
+            </div>
+
+            <p>Se seleccionarán otras preguntas más adelante...</p>
+
+            <button type="submit" class="start-btn"><a href="marketplaceVendedores.html">Vamos!</a></button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.vendedores-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vendedores-table th, .vendedores-table td, .tabla-solicitudes th, .tabla-solicitudes td {
+    padding: 10px;
+    border: 4px solid #ddd;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: darkred;
+}
+
+img {
+    width: 5vh;
+    height: 5vh;
+}
+
+.button-link {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Ajusta la posición del tooltip sobre el ícono */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Evita que el correo se rompa en varias líneas */
+}
+
+/* Flecha del tooltip */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Mostrar el tooltip al hacer hover sobre el enlace */
+.button-link:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilos para la tabla de solicitudes pendientes */
+.tabla-solicitudes {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-solicitudes th, .vendedores-table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.tabla-solicitudes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabla-solicitudes ul li {
+    margin: 5px 0;
+}
+
+/* Estilos para los botones de acción */
+.btn-accion {
+    padding: 8px 16px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.aprobar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.eliminar {
+    background-color: #f44336;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}

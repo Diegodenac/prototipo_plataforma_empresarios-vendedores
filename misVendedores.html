@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Vendedores</title>
+    <link rel="stylesheet" href="stylesMisVendedores.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Añadir librería Chart.js -->
+</head>
+<body>
+    <div class="container">
+        <h1>Vendedores</h1>
+        <table class="vendedores-table">
+            <thead>
+                <tr>
+                    <th>Vendedor</th>
+                    <th>Email</th>
+                    <th>Teléfono</th>
+                    <th>Actividad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="img/perfil.webp" alt="Perfil"><p>Micaela Gutierrez</p></td>
+                    <td>
+                        <a href="mailto:micagutierrez@example.com" class="button-link">
+                            <img src="img/correo.jpg" alt="Correo">
+                            <span class="tooltip">micagutierrez@example.com</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+123456789" class="button-link">
+                            <img src="img/fono.jpg" alt="Telefono">
+                            <span class="tooltip">+123456789</span>
+                        </a>
+                    </td>
+                    <td><button onclick="mostrarGrafico('ventasLucy')">Actividad</button></td>
+                </tr>
+                <tr>
+                    <td><img src="img/perfil.webp" alt="Perfil"><p>Amanda Hallock</p></td>
+                    <td>
+                        <a href="mailto:amanda@example.com" class="button-link">
+                            <img src="img/correo.jpg" alt="Correo">
+                            <span class="tooltip">amanda@example.com</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+123456789" class="button-link">
+                            <img src="img/fono.jpg" alt="Telefono">
+                            <span class="tooltip">+123456789</span>
+                        </a>
+                    </td>
+                    <td><button onclick="mostrarGrafico('ventasAmanda')">Actividad</button></td>
+                </tr>
+                <!-- Agrega más vendedores según sea necesario -->
+            </tbody>
+        </table>
+
+        <h2>Solicitudes Pendientes</h2>
+        <table class="tabla-solicitudes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th>Especialidad de Ventas</th>
+                    <th>Productos Vendidos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>
+                        <a href="mailto:juanperez@example.com" class="button-link">
+                            <img src="img/correo.jpg" alt="Correo">
+                            <span class="tooltip">juanperez@example.com</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+123456789" class="button-link">
+                            <img src="img/fono.jpg" alt="Telefono">
+                            <span class="tooltip">+123456789</span>
+                        </a>
+                    </td>
+                    <td>Bienes Raices</td>
+                    <td>
+                        <ul>
+                            <li>Inmobiliaria</li>
+                            <li>Productos para el hogar</li>
+                            <li>Herramientas</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <button class="btn-accion aprobar">Aprobar Solicitud</button>
+                        <button class="btn-accion eliminar">Eliminar Solicitud</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lucia Pereira</td>
+                    <td>
+                        <a href="mailto:luciapereira@example.com" class="button-link">
+                            <img src="img/correo.jpg" alt="Correo">
+                            <span class="tooltip">luciapereira@example.com</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="tel:+123456789" class="button-link">
+                            <img src="img/fono.jpg" alt="Telefono">
+                            <span class="tooltip">+123456789</span>
+                        </a>
+                    </td>
+                    <td>Cosméticos</td>
+                    <td>
+                        <ul>
+                            <li>Cosméticos</li>
+                            <li>Productos para el hogar</li>
+                            <li>Electrónica</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <button class="btn-accion aprobar">Aprobar Solicitud</button>
+                        <button class="btn-accion eliminar">Eliminar Solicitud</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!-- Modal para mostrar gráficos -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <canvas id="ventasChart"></canvas> <!-- Aquí se generará el gráfico -->
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Archivo JavaScript -->
+</body>
+</html>
